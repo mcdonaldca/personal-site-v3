@@ -1,0 +1,34 @@
+@mixin transition($properties...) {
+  -webkit-transition: ($properties);
+     -moz-transition: ($properties);
+       -o-transition: ($properties);
+      -ms-transition: ($properties);
+          transition: ($properties);
+}
+
+@mixin transform($properties...) {
+  -webkit-transform: ($properties); 
+     -moz-transform: ($properties); 
+      -ms-transform: ($properties); 
+          transform: ($properties);
+}
+
+// animations
+
+@mixin animation-name($properties...) {
+  -webkit-animation-name: ($properties);
+     -moz-animation-name: ($properties);
+          animation-name: ($properties);
+}
+
+@mixin animation-timing-function($properties...) {
+  -webkit-animation-timing-function: ($properties);
+     -moz-animation-timing-function: ($properties);
+          animation-timing-function: ($properties);
+}
+
+@mixin animation-duration($properties...) {
+  -webkit-animation-duration: ($properties);
+     -moz-animation-duration: ($properties);
+          animation-duration: ($properties);
+}

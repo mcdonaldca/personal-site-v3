@@ -1,0 +1,23 @@
+// overarching styles
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  background-color: $purple;
+  color: $yellow;
+  font-family: Quando, serif;
+  height: 100%;
+  width: 100%;
+}
+
+a {
+  color: $green;
+  @include transition(color .25s ease-in-out);
+
+  &:hover {
+    color: $yellow;
+  }
+}

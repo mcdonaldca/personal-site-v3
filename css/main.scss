@@ -1,0 +1,9 @@
+/* style sheet compiled using sass */
+
+@import "global/_colors.scss";
+@import "global/_mixins.scss";
+@import "global/_global.scss";
+
+// page rules
+
+@import "pages/_index.scss";

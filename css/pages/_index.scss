@@ -1,0 +1,93 @@
+header {
+  margin: 0 auto 20px;
+  position: relative;
+  text-align: center;
+  width: 150px;
+
+  .logo {
+    display: inline-block;
+    padding-top: 20px;
+    z-index: 1;
+
+    svg polygon {
+      transform-origin: center center;
+      transition: all 1s ease;
+      transform: translate(0);
+    }
+  }
+
+  .hover {
+    height: 52px;
+    left: 10px;
+    position: absolute;
+    top: 20px;
+    width: 130px;
+    z-index: 2;
+  }
+
+  @media screen and (min-width: 400px) {
+    // add invisible hover element
+    .hover {
+      @include animation-name(waitforit);
+      @include animation-timing-function(ease-in-out);
+      @include animation-duration(1s);
+    }
+
+    // wait for animation then add hover element
+    @keyframes waitforit {
+      0%   { display: none; }
+      100% { display: block; }
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n+1) {
+      @include transform(translate(8%, 4%));
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n+2) {
+      @include transform(translate(-7%, 6%));
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n+3) {
+      @include transform(translate(-9%, -5%));
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n+4) {
+      @include transform(translate(6%, -4%));
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n+5) {
+      @include transform(translate(-5%, 8%));
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n+6) {
+      @include transform(translate(-4%, -6%));
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n+7) {
+      @include transform(translate(5%, 7%));
+    }
+
+    // animate paths out
+    .hover:hover + .logo svg polygon:nth-of-type(8n) {
+      @include transform(translate(7%, -8%));
+    }
+  }
+
+  .sub-logo {
+    font-family: Dosis, sans-serif;
+  }
+}
+
+.about {
+  font-size: 85%;
+  line-height: 150%;
+  margin: 0 auto;
+  max-width: 500px;
+}

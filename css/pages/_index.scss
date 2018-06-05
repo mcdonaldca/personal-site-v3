@@ -30,7 +30,7 @@ header {
     .hover {
       @include animation-name(waitforit);
       @include animation-timing-function(ease-in-out);
-      @include animation-duration(1s);
+      @include animation-duration(.75s);
     }
 
     // wait for animation then add hover element
@@ -85,9 +85,10 @@ header {
   }
 }
 
-.about {
+.text {
   font-size: 85%;
   line-height: 150%;
   margin: 0 auto;
   max-width: 500px;
+  padding: 10px;
 }
